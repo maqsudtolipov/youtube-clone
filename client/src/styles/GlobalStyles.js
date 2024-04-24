@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+	:root {
+		--color-bg: #0f0f0f;
+		--color-white: #f1f1f1;
+	}
+	
 	*, 
 	*::before, 
 	*::after {
@@ -14,8 +19,11 @@ const GlobalStyles = createGlobalStyle`
 	}
 	
 	body {
-		font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+		font-size: 1.4rem;
 		line-height: 1.5;
+		color: var(--color-white);
+		background-color: var(--color-bg);
 	}
 	
 	a {

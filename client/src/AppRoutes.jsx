@@ -1,11 +1,12 @@
 import GlobalStyles from './styles/GlobalStyles.js';
+import AppLayout from './layout/AppLayout.jsx';
 
 function AppRoutes() {
   return (
-    <div>
-      Hello World
+    <>
+      <AppLayout></AppLayout>
       <GlobalStyles />
-    </div>
+    </>
   );
 }
 
