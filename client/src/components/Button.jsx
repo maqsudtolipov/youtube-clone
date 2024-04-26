@@ -18,6 +18,10 @@ const StyledButton = styled.button`
     background-color: var(--color-blue-dark);
   }
 
+  &:active {
+    background-color: var(--color-blue-dark-5);
+  }
+
   ${(props) =>
     props.$bordered &&
     css`

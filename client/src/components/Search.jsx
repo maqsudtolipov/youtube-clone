@@ -14,7 +14,6 @@ function Search() {
   return (
     <StyledSearch>
       <SearchForm />
-
       <CircleButton $gray title="Search with your voice" icon={<RiMicFill />} />
     </StyledSearch>
   );

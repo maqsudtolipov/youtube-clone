@@ -5,7 +5,7 @@ const StyledCircleButton = styled.button`
   width: 4rem;
   padding: 0.8rem;
 
-  color: #fff;
+  color: var(--color-white);
   border-radius: 99rem;
 
   &:hover {
