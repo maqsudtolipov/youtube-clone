@@ -1,4 +1,4 @@
-function Sidebar(props) {
+function Sidebar() {
   return <div>Sidebar</div>;
 }
 

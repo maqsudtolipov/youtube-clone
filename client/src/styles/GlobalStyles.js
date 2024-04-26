@@ -4,6 +4,11 @@ const GlobalStyles = createGlobalStyle`
 	:root {
 		--color-bg: #0f0f0f;
 		--color-white: #f1f1f1;
+		
+		--color-blue: #3ea6ff;
+		--color-blue-dark: #263850;
+		
+		--color-border: #303030;
 	}
 	
 	*, 
@@ -36,6 +41,20 @@ const GlobalStyles = createGlobalStyle`
 
   input, button, textarea, select {
     font: inherit;
+  }
+  
+  button {
+	  background: transparent;
+	  cursor: pointer;
+	  border: none;
+  }
+  
+  svg {
+	  color: inherit;
+	  font-size: 2.4rem;
+	  
+		// This is because icons too large compared to original
+	  scale: .8;
   }
 
   p, h1, h2, h3, h4, h5, h6 {
