@@ -1,14 +1,10 @@
 import styled from 'styled-components';
 
-import logoNameSvg from '../../assets/svg/logo-text.svg';
-
-import { RiMenuLine } from 'react-icons/ri';
-import CircleButton from '../../components/CircleButton.jsx';
-import { LogoName } from '../../components/LogoName.jsx';
 import Button from '../../components/Button.jsx';
 import Search from '../../components/Search.jsx';
 import NavHead from './NavHead.jsx';
 
+// TODO: Change when user is auth
 const StyledNav = styled.nav`
   height: 5.6rem;
   padding: 0 1.6rem;

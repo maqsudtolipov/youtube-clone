@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
+		--color-brand: #f00;
+	  
     --color-bg: #0f0f0f;
     --color-white: #f1f1f1;
 

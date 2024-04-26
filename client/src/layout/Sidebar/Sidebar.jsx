@@ -1,8 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import {
   RiArchiveStackLine,
-  RiBasketballLine,
-  RiBroadcastLine,
+  RiArrowDownSLine,
   RiErrorWarningLine,
   RiFireLine,
   RiFlagLine,
@@ -21,43 +20,19 @@ import {
   RiVideoDownloadLine,
   RiVideoLine,
 } from 'react-icons/ri';
+import SidebarLink from './StyledSidebarLink.jsx';
+import { faker } from '@faker-js/faker';
 
+// TODO: Change when user is auth
 const StyledSidebar = styled.div`
   width: 24rem;
   overflow-y: scroll;
 `;
 
-const SidebarList = styled.div`
+const SidebarList = styled.ul`
   padding: 1.2rem;
   border-bottom: 1px solid var(--color-border);
-`;
-
-const SideBarLink = styled.div`
-  height: 4rem;
-  padding: 0 1.2rem;
-
-  display: flex;
-  align-items: center;
-  gap: 2.4rem;
-
-  border-radius: 1rem;
-
-  // TEMP
-  cursor: pointer;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  ${(props) =>
-    props.$active &&
-    css`
-      background-color: rgba(255, 255, 255, 0.1);
-
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-    `}
+  list-style: none;
 `;
 
 const Heading = styled.h3`
@@ -78,100 +53,42 @@ function Sidebar() {
   return (
     <StyledSidebar>
       <SidebarList>
-        <SideBarLink $active>
-          <RiHome4Line />
-          <span>Home</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiPhoneFindLine />
-          <span>Shorts</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiArchiveStackLine />
-          <span>Subscriptions</span>
-        </SideBarLink>
+        <SidebarLink active={true} title="Home" icon={<RiHome4Line />} />
+        <SidebarLink title="Shorts" icon={<RiPhoneFindLine />} />
+        <SidebarLink title="Subscriptions" icon={<RiArchiveStackLine />} />
       </SidebarList>
 
       <SidebarList>
-        <SideBarLink>
-          <RiGamepadLine />
-          <span>You</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiHistoryLine />
-          <span>History</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiPlayList2Fill />
-          <span>Playlists</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiVideoLine />
-          <span>Your videos</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiTimeLine />
-          <span>Watch later</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiThumbUpLine />
-          <span>Liked videos</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiVideoDownloadLine />
-          <span>Downloads</span>
-        </SideBarLink>
+        <Heading>You</Heading>
+        <SidebarLink title="You" icon={<RiGamepadLine />} />
+        <SidebarLink title="History" icon={<RiHistoryLine />} />
+        <SidebarLink title="Playlists" icon={<RiPlayList2Fill />} />
+        <SidebarLink title="Your videos" icon={<RiVideoLine />} />
+        <SidebarLink title="Watch later" icon={<RiTimeLine />} />
+        <SidebarLink title="Liked videos" icon={<RiThumbUpLine />} />
+        <SidebarLink title="Downloads" icon={<RiVideoDownloadLine />} />
       </SidebarList>
 
       <SidebarList>
-        <Heading>Explore</Heading>
-        <SideBarLink>
-          <RiFireLine />
-          <span>Trending</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiMusicLine />
-          <span>Music</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiBroadcastLine />
-          <span>Live</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiGamepadLine />
-          <span>Gaming</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiNewspaperLine />
-          <span>News</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiBasketballLine />
-          <span>Sports</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiLightbulbLine />
-          <span>Learning</span>
-        </SideBarLink>
+        <Heading>Subscriptions</Heading>
+
+        {/*Fake YouTube creators*/}
+        {Array.from(Array(7).keys()).map((el) => (
+          <SidebarLink
+            title={faker.person.firstName()}
+            status={(el === 3 && 'new') || (el === 0 && 'live')}
+            img={<img src={faker.image.avatar()} alt="Creator avatar" />}
+          />
+        ))}
+
+        <SidebarLink title="Show 41 more" icon={<RiArrowDownSLine />} />
       </SidebarList>
 
       <SidebarList>
-        <SideBarLink>
-          <RiSettings3Line />
-          <span>Settings</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiFlagLine />
-          <span>Report History</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiQuestionLine />
-          <span>Help</span>
-        </SideBarLink>
-        <SideBarLink>
-          <RiErrorWarningLine />
-          <span>Send feedback</span>
-        </SideBarLink>
+        <SidebarLink title="Settings" icon={<RiSettings3Line />} />
+        <SidebarLink title="Report History" icon={<RiFlagLine />} />
+        <SidebarLink title="Help" icon={<RiQuestionLine />} />
+        <SidebarLink title="Send feedback" icon={<RiErrorWarningLine />} />
       </SidebarList>
 
       <Footer>&copy; 2024 Maqsud</Footer>
