@@ -22,8 +22,8 @@ const StyledButton = styled.button`
     background-color: var(--color-blue-dark-5);
   }
 
-  ${(props) =>
-    props.$bordered &&
+  ${({ $bordered }) =>
+    $bordered === true &&
     css`
       border: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -35,7 +35,7 @@ const StyledButton = styled.button`
 
 function Button({ children }) {
   return (
-    <StyledButton $bordered>
+    <StyledButton $bordered={true}>
       <RiUserLine /> {children}
     </StyledButton>
   );

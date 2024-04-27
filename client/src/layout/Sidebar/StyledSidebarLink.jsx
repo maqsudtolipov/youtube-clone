@@ -29,8 +29,8 @@ const StyledSidebarLink = styled.li`
     background-color: rgba(255, 255, 255, 0.1);
   }
 
-  ${(props) =>
-    props.active === true &&
+  ${({ $active }) =>
+    $active === true &&
     css`
       background-color: rgba(255, 255, 255, 0.1);
 
@@ -51,7 +51,7 @@ const NewIcon = styled(RiCircleFill)`
 
 function SidebarLink({ active = false, icon, img, title = '', status = '' }) {
   return (
-    <StyledSidebarLink active={active}>
+    <StyledSidebarLink $active={active}>
       {icon || img || 'Please give icon or img'}
 
       <span>{title || 'Please give a title'}</span>

@@ -11,11 +11,18 @@ const StyledAppLayout = styled.div`
     margin-left: 24rem;
     margin-top: 5.6rem;
 
+    // Temp
+    padding: 0 2.4rem;
+
     overflow-y: scroll;
   }
 
   .main--hidden {
     margin-left: 0;
+  }
+
+  .main--folded {
+    margin-left: 7.2rem;
   }
 `;
 
@@ -36,9 +43,11 @@ function AppLayout() {
     <StyledAppLayout>
       <Nav onHide={handleHide} onFold={handleFold} />
       <Sidebar isHidden={isHidden} isFolded={isFolded} />
-      <h2 className={`main ${isHidden ? 'main--hidden' : ''}`}>
+      <div
+        className={`main ${isHidden ? 'main--hidden' : ''} ${isFolded ? 'main--folded' : ''}`}
+      >
         <Tabs />
-      </h2>
+      </div>
     </StyledAppLayout>
   );
 }

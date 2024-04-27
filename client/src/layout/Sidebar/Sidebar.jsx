@@ -31,14 +31,14 @@ const StyledSidebar = styled.div`
   z-index: 1000;
   overflow-y: scroll;
 
-  ${(props) =>
-    props.isHidden &&
+  ${({ $isHidden }) =>
+    $isHidden === true &&
     css`
       transform: translateX(-100%);
     `}
 
-  ${(props) =>
-    props.isFolded &&
+  ${({ $isFolded }) =>
+    $isFolded === true &&
     css`
       width: 7.2rem;
 
@@ -65,8 +65,8 @@ const SidebarList = styled.ul`
   list-style: none;
 
   // Promotion
-  ${(props) =>
-    props.promo &&
+  ${({ $promo }) =>
+    $promo === true &&
     css`
       padding: 1.6rem 3.2rem;
 
@@ -92,7 +92,7 @@ const Footer = styled.footer`
 
 function Sidebar({ isHidden, isFolded }) {
   return (
-    <StyledSidebar isHidden={isHidden} isFolded={isFolded}>
+    <StyledSidebar $isHidden={isHidden} $isFolded={isFolded}>
       {isFolded ? (
         <SidebarList>
           <SidebarLink active={true} title="Home" icon={<RiHome4Line />} />
@@ -115,7 +115,7 @@ function Sidebar({ isHidden, isFolded }) {
             <SidebarLink title="History" icon={<RiHistoryLine />} />
           </SidebarList>
 
-          <SidebarList promo>
+          <SidebarList $promo>
             <p>Sign in to like videos, comment and subscribe.</p>
             <Button>Sign in</Button>
           </SidebarList>
