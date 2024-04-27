@@ -28,8 +28,8 @@ const StyledSidebar = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  overflow-y: scroll;
   z-index: 1000;
+  overflow-y: scroll;
 
   ${(props) =>
     props.isHidden &&

@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Nav from './Nav/Nav.jsx';
 import Sidebar from './Sidebar/Sidebar.jsx';
+import Tabs from '../components/Tabs.jsx';
 
 const StyledAppLayout = styled.div`
-  height: 100vh;
-
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-
   // TODO: move
   .main {
+    height: calc(100vh - 5.6rem);
     margin-left: 24rem;
+    margin-top: 5.6rem;
+
+    overflow-y: scroll;
   }
 
   .main--hidden {
@@ -37,7 +36,9 @@ function AppLayout() {
     <StyledAppLayout>
       <Nav onHide={handleHide} onFold={handleFold} />
       <Sidebar isHidden={isHidden} isFolded={isFolded} />
-      <h2 className={`main ${isHidden ? 'main--hidden' : ''}`}>Main</h2>
+      <h2 className={`main ${isHidden ? 'main--hidden' : ''}`}>
+        <Tabs />
+      </h2>
     </StyledAppLayout>
   );
 }

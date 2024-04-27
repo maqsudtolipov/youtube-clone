@@ -7,9 +7,12 @@ import NavHead from './NavHead.jsx';
 // TODO: Change when user is auth
 const StyledNav = styled.nav`
   height: 5.6rem;
+  width: 100%;
   padding: 0 1.6rem;
 
-  grid-column: 1/-1;
+  position: fixed;
+  top: 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
