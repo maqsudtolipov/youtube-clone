@@ -37,7 +37,7 @@ const StyledCircleButton = styled.button`
 
 function CircleButton({ onClick, icon, title = '', ...props }) {
   return (
-    <StyledCircleButton title={title} {...props}>
+    <StyledCircleButton title={title} {...props} onClick={onClick}>
       {icon}
     </StyledCircleButton>
   );

@@ -16,10 +16,10 @@ const NavLogo = styled.div`
   align-items: center;
 `;
 
-function NavHead() {
+function NavHead({ onHide, onFold }) {
   return (
     <StyledNavHead>
-      <CircleButton icon={<RiMenuLine />} />
+      <CircleButton icon={<RiMenuLine />} onClick={onFold} />
       <NavLogo>
         <LogoName src={logoNameSvg} />
       </NavLogo>

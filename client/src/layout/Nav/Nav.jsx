@@ -15,10 +15,10 @@ const StyledNav = styled.nav`
   justify-content: space-between;
 `;
 
-function Nav() {
+function Nav({ onHide, onFold }) {
   return (
     <StyledNav>
-      <NavHead />
+      <NavHead onHide={onHide} onFold={onFold} />
       <Search />
       <Button>Sign in</Button>
     </StyledNav>
