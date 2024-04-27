@@ -17,6 +17,7 @@ import {
 } from 'react-icons/ri';
 import SidebarLink from './StyledSidebarLink.jsx';
 import { faker } from '@faker-js/faker';
+import Button from '../../components/Button.jsx';
 
 // TODO: Change when user is auth
 const StyledSidebar = styled.div`
@@ -62,6 +63,17 @@ const SidebarList = styled.ul`
   padding: 1.2rem;
   border-bottom: 1px solid var(--color-border);
   list-style: none;
+
+  // Promotion
+  ${(props) =>
+    props.promo &&
+    css`
+      padding: 1.6rem 3.2rem;
+
+      button {
+        margin-top: 1.2rem;
+      }
+    `}
 `;
 
 const Heading = styled.h3`
@@ -96,30 +108,16 @@ function Sidebar({ isHidden, isFolded }) {
             <SidebarLink title="Shorts" icon={<RiPhoneFindLine />} />
             <SidebarLink title="Subscriptions" icon={<RiArchiveStackLine />} />
           </SidebarList>
+
           <SidebarList>
             <Heading>You</Heading>
             <SidebarLink title="You" icon={<RiVideoLine />} />
             <SidebarLink title="History" icon={<RiHistoryLine />} />
-            <SidebarLink title="Playlists" icon={<RiPlayList2Fill />} />
-            <SidebarLink title="Your videos" icon={<RiVideoLine />} />
-            <SidebarLink title="Watch later" icon={<RiTimeLine />} />
-            <SidebarLink title="Liked videos" icon={<RiThumbUpLine />} />
-            <SidebarLink title="Downloads" icon={<RiVideoDownloadLine />} />
           </SidebarList>
 
-          <SidebarList>
-            <Heading>Subscriptions</Heading>
-
-            {/*Fake YouTube creators*/}
-            {Array.from(Array(7).keys()).map((el) => (
-              <SidebarLink
-                title={faker.person.firstName()}
-                status={(el === 3 && 'new') || (el === 0 && 'live')}
-                img={<img src={faker.image.avatar()} alt="Creator avatar" />}
-              />
-            ))}
-
-            <SidebarLink title="Show 41 more" icon={<RiArrowDownSLine />} />
+          <SidebarList promo>
+            <p>Sign in to like videos, comment and subscribe.</p>
+            <Button>Sign in</Button>
           </SidebarList>
 
           <SidebarList>
@@ -132,6 +130,32 @@ function Sidebar({ isHidden, isFolded }) {
           <Footer>&copy; 2024 Maqsud</Footer>
         </>
       )}
+
+      {/*<SidebarList>*/}
+      {/*  <Heading>Subscriptions</Heading>*/}
+
+      {/*  /!*Fake YouTube creators*!/*/}
+      {/*  {Array.from(Array(7).keys()).map((el) => (*/}
+      {/*    <SidebarLink*/}
+      {/*      title={faker.person.firstName()}*/}
+      {/*      status={(el === 3 && 'new') || (el === 0 && 'live')}*/}
+      {/*      img={<img src={faker.image.avatar()} alt="Creator avatar" />}*/}
+      {/*    />*/}
+      {/*  ))}*/}
+
+      {/*  <SidebarLink title="Show 41 more" icon={<RiArrowDownSLine />} />*/}
+      {/*</SidebarList>*/}
+
+      {/*<SidebarList>*/}
+      {/*  <Heading>You</Heading>*/}
+      {/*  <SidebarLink title="You" icon={<RiVideoLine />} />*/}
+      {/*  <SidebarLink title="History" icon={<RiHistoryLine />} />*/}
+      {/*  <SidebarLink title="Playlists" icon={<RiPlayList2Fill />} />*/}
+      {/*  <SidebarLink title="Your videos" icon={<RiVideoLine />} />*/}
+      {/*  <SidebarLink title="Watch later" icon={<RiTimeLine />} />*/}
+      {/*  <SidebarLink title="Liked videos" icon={<RiThumbUpLine />} />*/}
+      {/*  <SidebarLink title="Downloads" icon={<RiVideoDownloadLine />} />*/}
+      {/*</SidebarList>*/}
     </StyledSidebar>
   );
 }
