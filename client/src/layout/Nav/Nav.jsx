@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import Button from '../../components/Button.jsx';
 import Search from '../../components/Search.jsx';
 import NavHead from './NavHead.jsx';
+import CircleButton from '../../components/CircleButton.jsx';
+import { RiMenuLine, RiNotification2Line } from 'react-icons/ri';
+import Modal from '../../components/Modal/Modal.jsx';
 
 // TODO: Change when user is auth
 const StyledNav = styled.nav`
@@ -23,6 +26,19 @@ function Nav({ onHide, onFold }) {
     <StyledNav>
       <NavHead onHide={onHide} onFold={onFold} />
       <Search />
+
+      <Modal>
+        <Modal.Open name="notifications">
+          <CircleButton icon={<RiNotification2Line />} />
+        </Modal.Open>
+        <Modal.Body name="notifications">
+          <p>Latest notifications</p>
+        </Modal.Body>
+        <Modal.Body name="profile">
+          <p>Profile</p>
+        </Modal.Body>
+      </Modal>
+
       <Button>Sign in</Button>
     </StyledNav>
   );
