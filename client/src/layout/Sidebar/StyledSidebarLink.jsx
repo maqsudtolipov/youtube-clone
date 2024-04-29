@@ -30,16 +30,6 @@ const StyledSidebarLink = styled(NavLink)`
     background-color: rgba(255, 255, 255, 0.1);
   }
 
-  ${({ $active }) =>
-    $active === true &&
-    css`
-      background-color: rgba(255, 255, 255, 0.1);
-
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-    `}
-
   &.active {
     background-color: rgba(255, 255, 255, 0.1);
 
@@ -58,16 +48,9 @@ const NewIcon = styled(RiCircleFill)`
   scale: 0.3;
 `;
 
-function SidebarLink({
-  to,
-  active = false,
-  icon,
-  img,
-  title = '',
-  status = '',
-}) {
+function SidebarLink({ to, icon, img, title = '', status = '' }) {
   return (
-    <StyledSidebarLink to={to} $active={active}>
+    <StyledSidebarLink to={to}>
       {icon || img || 'Please give icon or img'}
 
       <span>{title || 'Please give a title'}</span>

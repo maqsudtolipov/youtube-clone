@@ -94,7 +94,7 @@ function Sidebar({ isHidden, isFolded }) {
     <StyledSidebar $isHidden={isHidden} $isFolded={isFolded}>
       {isFolded ? (
         <SidebarList>
-          <SidebarLink active={true} title="Home" icon={<RiHome4Line />} />
+          <SidebarLink title="Home" icon={<RiHome4Line />} />
           <SidebarLink title="Shorts" icon={<RiPhoneFindLine />} />
           <SidebarLink title="Subscriptions" icon={<RiArchiveStackLine />} />
           <SidebarLink title="You" icon={<RiVideoLine />} />
