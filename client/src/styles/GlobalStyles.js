@@ -38,8 +38,11 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--color-bg);
   }
 
-  a {
+  a,
+  a:link,
+  a:visited {
     text-decoration: none;
+	  color: inherit;
   }
 
   ol, ul {

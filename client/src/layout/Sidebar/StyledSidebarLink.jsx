@@ -1,8 +1,9 @@
 import { RiCircleFill, RiGamepadLine } from 'react-icons/ri';
 import styled, { css } from 'styled-components';
 import { PiBroadcast } from 'react-icons/pi';
+import { NavLink } from 'react-router-dom';
 
-const StyledSidebarLink = styled.li`
+const StyledSidebarLink = styled(NavLink)`
   height: 4rem;
   padding: 0 1.2rem;
 
@@ -38,6 +39,14 @@ const StyledSidebarLink = styled.li`
         background-color: rgba(255, 255, 255, 0.2);
       }
     `}
+
+  &.active {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
 `;
 
 const BroadcastIcon = styled(PiBroadcast)`
@@ -49,9 +58,16 @@ const NewIcon = styled(RiCircleFill)`
   scale: 0.3;
 `;
 
-function SidebarLink({ active = false, icon, img, title = '', status = '' }) {
+function SidebarLink({
+  to,
+  active = false,
+  icon,
+  img,
+  title = '',
+  status = '',
+}) {
   return (
-    <StyledSidebarLink $active={active}>
+    <StyledSidebarLink to={to} $active={active}>
       {icon || img || 'Please give icon or img'}
 
       <span>{title || 'Please give a title'}</span>

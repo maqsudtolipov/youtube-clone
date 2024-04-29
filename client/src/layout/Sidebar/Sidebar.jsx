@@ -103,15 +103,32 @@ function Sidebar({ isHidden, isFolded }) {
       ) : (
         <>
           <SidebarList>
-            <SidebarLink active={true} title="Home" icon={<RiHome4Line />} />
-            <SidebarLink title="Shorts" icon={<RiPhoneFindLine />} />
-            <SidebarLink title="Subscriptions" icon={<RiArchiveStackLine />} />
+            <SidebarLink
+              to="/"
+              // active={true}
+              title="Home"
+              icon={<RiHome4Line />}
+            />
+            <SidebarLink
+              to="/feed/shorts"
+              title="Shorts"
+              icon={<RiPhoneFindLine />}
+            />
+            <SidebarLink
+              to="/feed/subscriptions"
+              title="Subscriptions"
+              icon={<RiArchiveStackLine />}
+            />
           </SidebarList>
 
           <SidebarList>
             <Heading>You</Heading>
-            <SidebarLink title="You" icon={<RiVideoLine />} />
-            <SidebarLink title="History" icon={<RiHistoryLine />} />
+            <SidebarLink to="/feed/you" title="You" icon={<RiVideoLine />} />
+            <SidebarLink
+              to="/feed/hitory"
+              title="History"
+              icon={<RiHistoryLine />}
+            />
           </SidebarList>
 
           <SidebarList $promo>
@@ -120,10 +137,18 @@ function Sidebar({ isHidden, isFolded }) {
           </SidebarList>
 
           <SidebarList>
-            <SidebarLink title="Settings" icon={<RiSettings3Line />} />
-            <SidebarLink title="Report History" icon={<RiFlagLine />} />
-            <SidebarLink title="Help" icon={<RiQuestionLine />} />
-            <SidebarLink title="Send feedback" icon={<RiErrorWarningLine />} />
+            <SidebarLink
+              to="/feed/account"
+              title="Settings"
+              icon={<RiSettings3Line />}
+            />
+            <SidebarLink to="_" title="Report History" icon={<RiFlagLine />} />
+            <SidebarLink to="_" title="Help" icon={<RiQuestionLine />} />
+            <SidebarLink
+              to="_"
+              title="Send feedback"
+              icon={<RiErrorWarningLine />}
+            />
           </SidebarList>
 
           <Footer>&copy; 2024 Maqsud</Footer>
