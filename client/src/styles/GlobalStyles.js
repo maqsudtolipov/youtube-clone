@@ -6,6 +6,8 @@ const GlobalStyles = createGlobalStyle`
 	  
     --color-bg: #0f0f0f;
     --color-white: #f1f1f1;
+	  
+	  --color-text-secondary: #aaa;
 
     --color-blue: #3ea6ff;
     --color-blue-dark: #13324c; // base 70% 
@@ -31,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: "Roboto", sans-serif;
     font-size: 1.4rem;
-    line-height: 1.5;
+    line-height: 1.4;
     color: var(--color-white);
     background-color: var(--color-bg);
   }

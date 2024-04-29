@@ -16,7 +16,6 @@ import {
   RiVideoLine,
 } from 'react-icons/ri';
 import SidebarLink from './StyledSidebarLink.jsx';
-import { faker } from '@faker-js/faker';
 import Button from '../../components/Button.jsx';
 
 // TODO: Change when user is auth
