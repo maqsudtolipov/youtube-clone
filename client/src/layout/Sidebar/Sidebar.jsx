@@ -12,6 +12,7 @@ import {
   RiSettings3Line,
   RiThumbUpLine,
   RiTimeLine,
+  RiUserLine,
   RiVideoDownloadLine,
   RiVideoLine,
 } from 'react-icons/ri';
@@ -133,7 +134,7 @@ function Sidebar({ isHidden, isFolded }) {
 
           <SidebarList $promo>
             <p>Sign in to like videos, comment and subscribe.</p>
-            <Button>Sign in</Button>
+            <Button icon={<RiUserLine />}>Sign in</Button>
           </SidebarList>
 
           <SidebarList>

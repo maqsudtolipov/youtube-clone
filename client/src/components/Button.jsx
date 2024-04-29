@@ -33,10 +33,10 @@ const StyledButton = styled.button`
     `}
 `;
 
-function Button({ children }) {
+function Button({ icon, children }) {
   return (
     <StyledButton $bordered={true}>
-      <RiUserLine /> {children}
+      {icon} {children}
     </StyledButton>
   );
 }

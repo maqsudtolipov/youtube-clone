@@ -34,7 +34,6 @@ function Nav({ onHide, onFold }) {
           <p>Latest notifications</p>
         </Modal.Body>
       </Modal>
-      s
     </StyledNav>
   );
 }
