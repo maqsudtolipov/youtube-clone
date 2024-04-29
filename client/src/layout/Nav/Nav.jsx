@@ -26,7 +26,6 @@ function Nav({ onHide, onFold }) {
     <StyledNav>
       <NavHead onHide={onHide} onFold={onFold} />
       <Search />
-
       <Modal>
         <Modal.Open name="notifications">
           <CircleButton icon={<RiNotification2Line />} />
@@ -35,8 +34,7 @@ function Nav({ onHide, onFold }) {
           <p>Latest notifications</p>
         </Modal.Body>
       </Modal>
-
-      <Button>Sign in</Button>
+      s
     </StyledNav>
   );
 }

@@ -4,6 +4,7 @@ import Nav from './Nav/Nav.jsx';
 import Sidebar from './Sidebar/Sidebar.jsx';
 import Tabs from '../components/Tabs.jsx';
 import Main from './Main/Main.jsx';
+import { Outlet } from 'react-router-dom';
 
 const StyledAppLayout = styled.div``;
 
@@ -24,7 +25,9 @@ function AppLayout() {
     <StyledAppLayout>
       <Nav onHide={handleHide} onFold={handleFold} />
       <Sidebar isHidden={isHidden} isFolded={isFolded} />
-      <Main isHidden={isHidden} isFolded={isFolded} />
+      <Main isHidden={isHidden} isFolded={isFolded}>
+        <Outlet />
+      </Main>
     </StyledAppLayout>
   );
 }
