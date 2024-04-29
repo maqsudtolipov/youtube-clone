@@ -40,14 +40,20 @@ const Modal = ({ children }) => {
 };
 
 const Open = ({ name, children }) => {
-  const { handleOpen } = useContext(ModalContext);
+  const { openModal, handleOpen, handleClose } = useContext(ModalContext);
 
-  return cloneElement(children, { onClick: () => handleOpen(name) });
+  const handleClick = (e, name) => {
+    e.stopPropagation();
+
+    openModal === '' || openModal !== name ? handleOpen(name) : handleClose();
+  };
+
+  return cloneElement(children, { onClick: (e) => handleClick(e, name) });
 };
 
 const Body = ({ name, children }) => {
   const { openModal, handleClose } = useContext(ModalContext);
-  const { ref } = useOutsideClick(handleClose);
+  const { ref } = useOutsideClick(handleClose, false);
 
   if (openModal !== name) return null;
 

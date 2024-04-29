@@ -34,9 +34,6 @@ function Nav({ onHide, onFold }) {
         <Modal.Body name="notifications">
           <p>Latest notifications</p>
         </Modal.Body>
-        <Modal.Body name="profile">
-          <p>Profile</p>
-        </Modal.Body>
       </Modal>
 
       <Button>Sign in</Button>

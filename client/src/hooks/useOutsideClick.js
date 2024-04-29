@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 // Runs handler function when outside of element is clicked
-const useOutsideClick = (handler) => {
+const useOutsideClick = (handler, listenCapturing) => {
   const ref = useRef();
 
   // Closes modal if outside it clicked
@@ -12,9 +12,10 @@ const useOutsideClick = (handler) => {
       }
     };
 
-    document.addEventListener('click', handleClick, true);
-    return () => document.removeEventListener('click', handleClick, true);
-  }, [handler]);
+    document.addEventListener('click', handleClick, listenCapturing);
+    return () =>
+      document.removeEventListener('click', handleClick, listenCapturing);
+  }, [listenCapturing, handler]);
 
   return { ref };
 };
