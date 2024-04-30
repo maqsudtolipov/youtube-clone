@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Button from '../components/Button.jsx';
-import { RiArchiveStackLine } from 'react-icons/ri';
+import { RiArchiveStackLine, RiUserLine } from 'react-icons/ri';
 
 const StyledSignInFirst = styled.div`
   padding-top: 14rem;
@@ -36,7 +36,9 @@ const SignInFirst = ({ icon, title, description }) => {
         <p>Sign in to see updates from your favourite YouTube channels</p>
       </Message>
 
-      <Button>Sign in</Button>
+      <Button icon={<RiUserLine />} bordered={true}>
+        Sign in
+      </Button>
     </StyledSignInFirst>
   );
 };

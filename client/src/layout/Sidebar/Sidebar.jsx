@@ -134,7 +134,9 @@ function Sidebar({ isHidden, isFolded }) {
 
           <SidebarList $promo>
             <p>Sign in to like videos, comment and subscribe.</p>
-            <Button icon={<RiUserLine />}>Sign in</Button>
+            <Button icon={<RiUserLine />} bordered={true}>
+              Sign in
+            </Button>
           </SidebarList>
 
           <SidebarList>

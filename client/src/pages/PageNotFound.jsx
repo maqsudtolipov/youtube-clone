@@ -40,7 +40,9 @@ const PageNotFound = () => {
         </p>
       </Message>
 
-      <Button icon={<RiHome4Line />}>Go Home</Button>
+      <Button icon={<RiHome4Line />} bordered={true}>
+        Go Home
+      </Button>
     </StyledSignInFirst>
   );
 };

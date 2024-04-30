@@ -5,6 +5,7 @@ import SignInFirst from './pages/SignInFirst.jsx';
 import React from 'react';
 import Home from './pages/Home.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
+import Subscriptions from './pages/Subscriptions.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,10 @@ const router = createBrowserRouter([
       },
       {
         path: 'feed',
-        children: [{ path: 'subscriptions', element: <SignInFirst /> }],
+        children: [
+          { path: 'subscriptions-n', element: <SignInFirst /> },
+          { path: 'subscriptions', element: <Subscriptions /> },
+        ],
       },
     ],
   },

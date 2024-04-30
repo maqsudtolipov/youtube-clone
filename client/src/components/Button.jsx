@@ -33,9 +33,9 @@ const StyledButton = styled.button`
     `}
 `;
 
-function Button({ icon, children }) {
+function Button({ icon, bordered, children }) {
   return (
-    <StyledButton $bordered={true}>
+    <StyledButton $bordered={bordered}>
       {icon} {children}
     </StyledButton>
   );
