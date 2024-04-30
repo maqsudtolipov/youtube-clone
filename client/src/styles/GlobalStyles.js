@@ -2,20 +2,20 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-		--color-brand: #f00;
-	  
+    --color-brand: #f00;
+
     --color-bg: #0f0f0f;
     --color-white: #f1f1f1;
-	  
-	  --color-text-secondary: #aaa;
+
+    --color-text-secondary: #aaa;
 
     --color-blue: #3ea6ff;
     --color-blue-dark: #13324c; // base 70% 
     --color-blue-dark-5: rgba(19, 50, 76, 0.5);
 
     --color-border: #303030;
-	  
-	  --color-modal: #282828;
+
+    --color-modal: #282828;
   }
 
   *,
@@ -42,7 +42,7 @@ const GlobalStyles = createGlobalStyle`
   a:link,
   a:visited {
     text-decoration: none;
-	  color: inherit;
+    color: inherit;
   }
 
   ol, ul {

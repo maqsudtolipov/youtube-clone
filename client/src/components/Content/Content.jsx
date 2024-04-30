@@ -11,7 +11,9 @@ const Thumbnail = styled.div`
   img {
     width: 100%;
     aspect-ratio: 16/9;
+
     object-fit: cover;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 1.2rem;
   }
 
@@ -29,6 +31,7 @@ const Details = styled.div`
 const Avatar = styled.img`
   height: 3.4rem;
   width: 3.4rem;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50rem;
 `;
 
@@ -47,7 +50,7 @@ const Content = ({ img, title, avatar, username, views, createdAt }) => {
   return (
     <StyledContent>
       <Thumbnail>
-        <img src={img} alt="Thumbnail" />
+        <img className="img" src={img} alt="Thumbnail" />
       </Thumbnail>
 
       <Details>
