@@ -67,7 +67,7 @@ const tabs = [
   'New to you',
 ];
 
-const TabsList = forwardRef(function TabsList({ onScroll }, ref) {
+const PillsTabsList = forwardRef(function TabsList({ onScroll }, ref) {
   const activeTab = 1;
 
   return (
@@ -81,4 +81,4 @@ const TabsList = forwardRef(function TabsList({ onScroll }, ref) {
   );
 });
 
-export default TabsList;
+export default PillsTabsList;

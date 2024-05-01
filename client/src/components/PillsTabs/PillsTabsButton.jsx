@@ -49,7 +49,7 @@ const ButtonContainer = styled.div`
     `}
 `;
 
-function TabsButton({ isVisible, position, onClick }) {
+function PillsTabsButton({ isVisible, position, onClick }) {
   return (
     <ButtonContainer $isVisible={isVisible} $position={position}>
       <CircleButton
@@ -63,4 +63,4 @@ function TabsButton({ isVisible, position, onClick }) {
   );
 }
 
-export default TabsButton;
+export default PillsTabsButton;

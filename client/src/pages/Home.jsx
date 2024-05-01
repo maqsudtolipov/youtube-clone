@@ -1,11 +1,11 @@
 import React from 'react';
-import Tabs from '../components/Tabs/Tabs.jsx';
+import PillsTabs from '../components/PillsTabs/PillsTabs.jsx';
 import Content from '../components/Content/Content.jsx';
 
 const Home = () => {
   return (
     <>
-      <Tabs />
+      <PillsTabs />
       <div className="videos">
         {[...Array(9).keys()].map((el) => (
           <Content
