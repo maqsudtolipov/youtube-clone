@@ -1,8 +1,7 @@
 import ChannelBanner from './ChannelBanner.jsx';
 import ChannelHeader from './ChannelHeader.jsx';
 import Tabs from '../../components/Tabs/Tabs.jsx';
-import { RiArchiveStackLine, RiFilmLine, RiUserLine } from 'react-icons/ri';
-import Button from '../../components/Button/Button.jsx';
+import { RiFilmLine } from 'react-icons/ri';
 import Error from '../../components/Error/Error.jsx';
 import React from 'react';
 
