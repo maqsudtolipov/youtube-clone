@@ -15,17 +15,6 @@ const StyledTabs = styled(NavLink)`
   &:hover {
     border-color: #aaa;
   }
-
-  ${({ $active }) =>
-    $active === true &&
-    css`
-      color: var(--color-white);
-      border-color: var(--color-white);
-
-      &:hover {
-        border-color: var(--color-white);
-      }
-    `}
 `;
 
 const Tab = ({ to, children }) => {

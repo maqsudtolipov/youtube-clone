@@ -31,6 +31,10 @@ const StyledSidebar = styled.div`
   z-index: 1000;
   overflow-y: scroll;
 
+  a {
+    color: inherit;
+  }
+
   ${({ $isHidden }) =>
     $isHidden === true &&
     css`

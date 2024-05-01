@@ -42,7 +42,6 @@ const GlobalStyles = createGlobalStyle`
   a:link,
   a:visited {
     text-decoration: none;
-    //color: inherit;
   }
 
   ol, ul {
