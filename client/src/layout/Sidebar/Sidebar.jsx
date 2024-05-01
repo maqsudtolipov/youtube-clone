@@ -47,7 +47,7 @@ const StyledSidebar = styled.div`
         border-bottom: 0;
       }
 
-      li {
+      a {
         height: auto;
         padding: 1.4rem 0;
 

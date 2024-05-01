@@ -11,7 +11,7 @@ const StyledAppLayout = styled.div``;
 // TODO: Move toggle sidebar to context, because state re-renders main
 function AppLayout() {
   const [isHidden, setIsHidden] = useState(false);
-  const [isFolded, setIsFolded] = useState(false);
+  const [isFolded, setIsFolded] = useState(true);
 
   function handleHide() {
     setIsHidden((s) => !s);
