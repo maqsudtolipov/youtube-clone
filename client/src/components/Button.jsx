@@ -22,6 +22,35 @@ const StyledButton = styled.button`
     background-color: var(--color-blue-dark-5);
   }
 
+  ${({ $color }) => {
+    if ($color === 'white')
+      return css`
+        color: #000;
+        background-color: #fff;
+
+        &:hover {
+          background-color: #e6e6e6;
+        }
+
+        &:active {
+          background-color: #cccccc;
+        }
+      `;
+
+    if ($color === 'gray')
+      return css`
+        color: #fff;
+
+        &:hover {
+          background-color: #262626;
+        }
+
+        &:active {
+          background-color: #1a1a1a;
+        }
+      `;
+  }}
+
   ${({ $bordered }) =>
     $bordered === true &&
     css`
@@ -33,9 +62,9 @@ const StyledButton = styled.button`
     `}
 `;
 
-function Button({ icon, bordered, children }) {
+function Button({ icon, bordered, color = '', children }) {
   return (
-    <StyledButton $bordered={bordered}>
+    <StyledButton $color={color} $bordered={bordered}>
       {icon} {children}
     </StyledButton>
   );

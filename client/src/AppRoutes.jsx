@@ -6,6 +6,7 @@ import React from 'react';
 import Home from './pages/Home.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import Subscriptions from './pages/Subscriptions.jsx';
+import Channel from './pages/Channel/Channel.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/:channelId',
+        element: <Channel />,
       },
       {
         path: 'feed',
