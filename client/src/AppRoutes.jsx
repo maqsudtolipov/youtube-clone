@@ -7,6 +7,8 @@ import Home from './pages/Home.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import Subscriptions from './pages/Subscriptions.jsx';
 import Channel from './pages/Channel/Channel.jsx';
+import { RiGhostLine, RiHome4Line } from 'react-icons/ri';
+import Button from './components/Button/Button.jsx';
 
 const router = createBrowserRouter([
   {
