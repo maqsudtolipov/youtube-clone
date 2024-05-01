@@ -27,8 +27,12 @@ const Input = styled.input`
   color: var(--color-white);
   background: transparent;
   border: none;
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #aaa;
   outline: none;
+
+  &:focus {
+    border-bottom: 1px solid #fff;
+  }
 `;
 
 const TabsSearch = () => {

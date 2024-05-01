@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-const StyledTabs = styled.div`
+const StyledTabs = styled(NavLink)`
   height: 4.8rem;
   display: flex;
   align-items: center;
