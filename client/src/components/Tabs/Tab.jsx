@@ -28,8 +28,8 @@ const StyledTabs = styled(NavLink)`
     `}
 `;
 
-const Tab = ({ active = false, children }) => {
-  return <StyledTabs $active={active}>{children}</StyledTabs>;
+const Tab = ({ to, children }) => {
+  return <StyledTabs to={to}>{children}</StyledTabs>;
 };
 
 export default Tab;

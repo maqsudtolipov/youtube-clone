@@ -9,15 +9,24 @@ const StyledTabs = styled.div`
   gap: 2.4rem;
 
   border-bottom: 1px solid var(--color-border);
+
+  .active {
+    color: var(--color-white);
+    border-color: var(--color-white);
+
+    &:hover {
+      border-color: var(--color-white);
+    }
+  }
 `;
 
 const Tabs = () => {
   return (
     <StyledTabs>
-      <Tab active={true}>Home</Tab>
-      <Tab>Videos</Tab>
-      <Tab>Playlists</Tab>
-      <Tab>Community</Tab>
+      <Tab to="featured">Home</Tab>
+      <Tab to="videos">Videos</Tab>
+      <Tab to="playlists">Playlists</Tab>
+      <Tab to="community">Community</Tab>
       <TabsSearch />
     </StyledTabs>
   );
