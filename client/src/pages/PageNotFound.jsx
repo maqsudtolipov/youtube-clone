@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { RiArchiveStackLine, RiGhostLine, RiHome4Line } from 'react-icons/ri';
-import Button from '../components/Button.jsx';
+import Button from '../components/Button/Button.jsx';
 
 const StyledSignInFirst = styled.div`
   padding-top: 14rem;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import CircleButton from './CircleButton.jsx';
+import CircleButton from '../Button/CircleButton.jsx';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
 const ButtonContainer = styled.div`

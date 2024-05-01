@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import Button from '../../components/Button.jsx';
+import Button from '../../components/Button/Button.jsx';
 import Search from '../../components/Search.jsx';
 import NavHead from './NavHead.jsx';
-import CircleButton from '../../components/CircleButton.jsx';
+import CircleButton from '../../components/Button/CircleButton.jsx';
 import { RiMenuLine, RiNotification2Line } from 'react-icons/ri';
 import Modal from '../../components/Modal/Modal.jsx';
 

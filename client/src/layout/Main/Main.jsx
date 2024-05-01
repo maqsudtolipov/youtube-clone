@@ -1,5 +1,5 @@
 import React from 'react';
-import Tabs from '../../components/Tabs.jsx';
+import Tabs from '../../components/Tabs/Tabs.jsx';
 import styled from 'styled-components';
 import Content from '../../components/Content/Content.jsx';
 import { Outlet } from 'react-router-dom';

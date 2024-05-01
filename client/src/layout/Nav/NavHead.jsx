@@ -1,4 +1,4 @@
-import CircleButton from '../../components/CircleButton.jsx';
+import CircleButton from '../../components/Button/CircleButton.jsx';
 import { RiMenuLine } from 'react-icons/ri';
 import { LogoName } from '../../components/LogoName.jsx';
 import logoNameSvg from '../../assets/svg/logo-text.svg';

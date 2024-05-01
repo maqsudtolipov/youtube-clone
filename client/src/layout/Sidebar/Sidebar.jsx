@@ -17,7 +17,7 @@ import {
   RiVideoLine,
 } from 'react-icons/ri';
 import SidebarLink from './StyledSidebarLink.jsx';
-import Button from '../../components/Button.jsx';
+import Button from '../../components/Button/Button.jsx';
 
 // TODO: Change when user is auth
 const StyledSidebar = styled.div`

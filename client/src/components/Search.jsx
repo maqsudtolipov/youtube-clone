@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CircleButton from './CircleButton.jsx';
+import CircleButton from './Button/CircleButton.jsx';
 import { RiMicFill } from 'react-icons/ri';
 import SearchForm from './SearchForm.jsx';
 

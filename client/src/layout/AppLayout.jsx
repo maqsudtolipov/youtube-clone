@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Nav from './Nav/Nav.jsx';
 import Sidebar from './Sidebar/Sidebar.jsx';
-import Tabs from '../components/Tabs.jsx';
+import Tabs from '../components/Tabs/Tabs.jsx';
 import Main from './Main/Main.jsx';
 import { Outlet } from 'react-router-dom';
 

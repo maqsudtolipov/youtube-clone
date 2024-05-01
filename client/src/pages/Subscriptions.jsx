@@ -1,8 +1,8 @@
 import Content from '../components/Content/Content.jsx';
 import styled from 'styled-components';
 import { Contents } from '../components/Contents.jsx';
-import Button from '../components/Button.jsx';
-import CircleButton from '../components/CircleButton.jsx';
+import Button from '../components/Button/Button.jsx';
+import CircleButton from '../components/Button/CircleButton.jsx';
 import { RiLayoutGridFill, RiListUnordered } from 'react-icons/ri';
 
 const Header = styled.div`
