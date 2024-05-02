@@ -1,63 +1,83 @@
-import {
-  cloneElement,
-  createContext,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { cloneElement, createContext, useContext, useState } from 'react';
 import styled from 'styled-components';
 import { useOutsideClick } from '../../hooks/useOutsideClick.js';
+import { RiCloseLine, RiNotification2Line } from 'react-icons/ri';
+import CircleButton from '../Button/CircleButton.jsx';
 
 const StyledBody = styled.div`
-  // Temp
-  padding: 1.4rem;
+  width: 56rem;
+  padding: 2.4rem;
+  max-height: 40rem;
 
+  display: flex;
+  flex-direction: column;
   position: fixed;
   z-index: 2000;
   left: 50%;
   top: 50%;
+  translate: -50% -50%;
 
+  color: var(--color-white);
   background-color: var(--color-modal);
   border-radius: 1.2rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0.4rem 3.2rem 0;
+`;
+
+const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Info = styled.div`
+  height: 100%;
+  overflow: scroll;
 `;
 
 // Compound Component
 const ModalContext = createContext(null);
 
 const Modal = ({ children }) => {
-  const [openModal, setOpenModal] = useState('');
+  const [modalName, setModalName] = useState('');
 
-  const handleOpen = (name) => setOpenModal(name);
-  const handleClose = () => setOpenModal('');
+  const handleOpen = (name) => setModalName(name);
+  const handleClose = () => setModalName('');
 
   return (
-    <ModalContext.Provider value={{ openModal, handleOpen, handleClose }}>
+    <ModalContext.Provider value={{ modalName, handleOpen, handleClose }}>
       {children}
     </ModalContext.Provider>
   );
 };
 
 const Open = ({ name, children }) => {
-  const { openModal, handleOpen, handleClose } = useContext(ModalContext);
+  const { modalName, handleOpen, handleClose } = useContext(ModalContext);
 
   const handleClick = (e, name) => {
     e.stopPropagation();
 
-    openModal === '' || openModal !== name ? handleOpen(name) : handleClose();
+    modalName === '' || modalName !== name ? handleOpen(name) : handleClose();
   };
 
   return cloneElement(children, { onClick: (e) => handleClick(e, name) });
 };
 
 const Body = ({ name, children }) => {
-  const { openModal, handleClose } = useContext(ModalContext);
+  const { modalName, handleClose } = useContext(ModalContext);
   const { ref } = useOutsideClick(handleClose, false);
 
-  if (openModal !== name) return null;
+  if (modalName !== name) return null;
 
-  return <StyledBody ref={ref}>{children}</StyledBody>;
+  return (
+    <StyledBody ref={ref}>
+      <Header>
+        <h2>About</h2>
+        <CircleButton icon={<RiCloseLine />} onClick={handleClose} />
+      </Header>
+
+      <Info>{children}</Info>
+    </StyledBody>
+  );
 };
 
 Modal.Open = Open;

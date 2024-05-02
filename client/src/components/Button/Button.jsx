@@ -62,9 +62,9 @@ const StyledButton = styled.button`
     `}
 `;
 
-function Button({ icon, bordered, color = '', children }) {
+function Button({ icon, bordered, color = '', onClick, children }) {
   return (
-    <StyledButton $color={color} $bordered={bordered}>
+    <StyledButton $color={color} $bordered={bordered} onClick={onClick}>
       {icon} {children}
     </StyledButton>
   );

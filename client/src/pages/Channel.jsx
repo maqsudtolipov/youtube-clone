@@ -10,7 +10,6 @@ const Channel = () => {
       <ChannelBanner />
       <ChannelHeader />
       <Tabs />
-
       <Outlet />
     </div>
   );

@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from '../../components/Button/Button.jsx';
 import styled from 'styled-components';
+import Modal from '../../components/Modal/Modal.jsx';
+import InfoModal from './InfoModal.jsx';
 
 const Header = styled.div`
   padding: 1.6rem 6.4rem 0 6.4rem;
@@ -52,9 +54,7 @@ const ChannelHeader = () => {
           <Button color="white" bordered={true}>
             Subscribe
           </Button>
-          <Button color="gray" bordered={true}>
-            More Info
-          </Button>
+          <InfoModal />
         </HeaderActions>
       </HeaderContent>
     </Header>
