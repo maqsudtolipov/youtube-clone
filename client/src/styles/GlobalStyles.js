@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
 
     --color-border: #303030;
 
-    --color-modal: #282828;
+    --color-modal: #212121;
   }
 
   *,

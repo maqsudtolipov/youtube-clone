@@ -40,13 +40,14 @@ const StyledButton = styled.button`
     if ($color === 'gray')
       return css`
         color: #fff;
+        background-color: rgba(255, 255, 255, 0.1);
 
         &:hover {
-          background-color: #262626;
+          background-color: rgba(255, 255, 255, 0.2);
         }
 
         &:active {
-          background-color: #1a1a1a;
+          background-color: rgba(255, 255, 255, 0.3);
         }
       `;
   }}
